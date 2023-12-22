@@ -6,7 +6,7 @@ const getAllUsers = async (req, res) => {
 }
 
 const postUser = async (req, res) => {
-    let found = await User.findOne({ id: req.params.id })
+    let found = await User.findOne({ id: req.body.id })
     if (found) {
         console.log("This id exist")
     } else {
